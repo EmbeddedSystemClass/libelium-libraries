@@ -1,0 +1,5 @@
+SIM5218 allows to use ten connections simultaneously.
+Here is the example code with a UDP and TCP connections. (Multiclient1)
+
+SIM5218 allows to create a TCP server with a maximum of ten TCP clients. 
+In this example the server send a message every 5 seconds to all clients. (Multiclient2)

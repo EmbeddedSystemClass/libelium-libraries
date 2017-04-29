@@ -1,0 +1,30 @@
+/*NOTE: With some sketches, the buffer of the UART may be small, 
+to increase the length of the buffer you need to change these lines in the 
+file HardwareSerial.h in /arduino-1.0.X/hardware/arduino/avr/cores/arduino/ 
+(or in file HardwareSerial.cpp in /arduino-1.0.X/hardware/arduino/cores/arduino/ depending on the Arduino IDE version)*/
+
+#if (RAMEND < 1000)
+#define SERIAL_TX_BUFFER_SIZE 16
+#define SERIAL_RX_BUFFER_SIZE 16
+#else
+#define SERIAL_TX_BUFFER_SIZE 64
+#define SERIAL_RX_BUFFER_SIZE 64
+#endif
+#endif
+                
+
+  
+
+to
+
+#if (RAMEND < 1000)
+#define SERIAL_TX_BUFFER_SIZE 400
+#define SERIAL_RX_BUFFER_SIZE 400
+#else
+#define SERIAL_TX_BUFFER_SIZE 400
+#define SERIAL_RX_BUFFER_SIZE 400
+#endif
+#endif
+                
+
+  
